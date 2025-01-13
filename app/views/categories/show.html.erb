@@ -1,3 +1,11 @@
 <h1><%= @category.name %></h1>
 
+  <ul>
+    <% @category.bookmarks.each do |bookmark| %>
+      <li>
+       <%= bookmark.recipe.name %> | <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
+
 <%= link_to "Add a recipe to this category", new_category_bookmark_path(@category) %>

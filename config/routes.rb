@@ -8,9 +8,15 @@ Rails.application.routes.draw do
   root "categories#index"
 
   # Define routes for categories with only index, show, create, and new actions
+  resources :recipes, only: [:show]
   resources :categories, except: [:edit, :update] do
     resources :bookmarks, only: [:new, :create]
   end
+
+  resources :bookmarks, only: [:destroy]
+
+
+  # resources :bookmarks, only [:destroy]
 
   # Defines the root path route ("/")
   # root "posts#index"
