@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_13_094509) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_13_104123) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookmarks", force: :cascade do |t|
-    t.string "comment"
+    t.text "comment"
     t.bigint "recipe_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_13_094509) do
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.string "image_url"
     t.decimal "rating"
     t.datetime "created_at", null: false
