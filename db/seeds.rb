@@ -8,7 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Recipe.create([
+Recipe.destroy_all
+
+Recipe.create!([
   {
     name: 'Spaghetti Bolognese',
     description: 'A classic Italian pasta dish with a rich, savory meat sauce.',

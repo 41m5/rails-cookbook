@@ -1,0 +1,7 @@
+<h1>New Category</h1>
+
+<%= simple_form_for @category do |f| %>
+  <%= f.input :name, label: "Category Name: " %>
+  <br>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
