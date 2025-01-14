@@ -1,0 +1,15 @@
+.banner-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+
+  h1, h2 {
+    text-align: center;
+    color: white;
+  }
+}

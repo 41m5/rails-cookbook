@@ -1,1 +1,20 @@
 // Specific CSS for your home-page
+.info-top {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  padding: 30px 0 20px 0;
+
+  a {
+    color: white;
+  }
+}
+
+h3 {
+  color: teal;
+}
+
+body {
+  background-color: rgb(225, 225, 225);
+}

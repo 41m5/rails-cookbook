@@ -1,12 +1,26 @@
-.navbar-lewagon {
+.nav {
+  background-color: white;
+  height: 80px;
+  display: flex;
   justify-content: space-between;
-  background: white;
-}
+  align-items: center;
+  padding-left: 20px;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  img {
+    height: 30px;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  a {
+    text-decoration: none;
+    color: teal;
+    font-family: "DM Serif Text", "Helvetica", "sans-serif";
+  }
+
+  .nav-right {
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    float: right;
+  }
 }
