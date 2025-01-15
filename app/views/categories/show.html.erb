@@ -1,6 +1,5 @@
-<div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%='https://images.unsplash.com/photo-1495546968767-f0573cca821e?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'%>)">
+<div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @category.image.key %>)">
   <h1><%= @category.name %></h1>
-  <h2>Save your favourite recipes</h2>
 </div>
 
   <div class='info-top'>
@@ -11,13 +10,12 @@
 <div class="cards-trip">
     <% @category.bookmarks.each do |bookmark| %>
     <div class="card-trip">
-
       <%= link_to bookmark_path(bookmark),
         data: {turbo_method: :delete,
           turbo_confirm: "Are you sure?" }, class: "btn btn-delete" do %>
       <i class="fa-solid fa-trash"></i>
       <% end %>
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <img src="<%= bookmark.recipe.image_url %>" alt="<%= bookmark.recipe.name %>" />
     <div class="card-trip-infos">
       <div>
         <h2><%= bookmark.recipe.name %></h2>

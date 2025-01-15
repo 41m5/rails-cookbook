@@ -7,6 +7,7 @@
 }
 
 .card-trip {
+  position: relative;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -45,8 +46,9 @@
   width: 40px;
 }
 
-// .btn-delete {
-//   position: absolute;
-//   right: 20px;
-//   top: 20px;
-// }
+.btn-delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.5;
+}
